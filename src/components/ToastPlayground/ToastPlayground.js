@@ -2,7 +2,7 @@ import React from "react";
 import RadioButton from "../RadioButton";
 import TextArea from "../TextArea";
 import Button from "../Button";
-import Toast from "../Toast";
+import ToastShelf from "../ToastShelf";
 
 import styles from "./ToastPlayground.module.css";
 
@@ -17,15 +17,15 @@ function ToastPlayground() {
     event.preventDefault();
     const newToastMessages = [
       ...toastMessages,
-      { message: textAreaValue, key: Math.random() },
+      { message: textAreaValue, key: Math.random(), variant: radioButtonValue },
     ];
     setTextAreaValue("");
+    setRadioButtonValue("notice");
     setToastMessages(newToastMessages);
   };
 
   const handleXButtonClick = (id) => {
     const newToastMessages = toastMessages.filter((item) => item.key !== id);
-    console.log(id);
     setToastMessages(newToastMessages);
   };
 
@@ -36,18 +36,10 @@ function ToastPlayground() {
         <h1>Toast Playground</h1>
       </header>
 
-      {toastMessages.map((toastMessage) => {
-        return (
-          <Toast
-            key={toastMessage.key}
-            id={toastMessage.key}
-            variant={radioButtonValue}
-            handleXButtonClick={handleXButtonClick}
-          >
-            {toastMessage.message}
-          </Toast>
-        );
-      })}
+      <ToastShelf
+        listOfToasts={toastMessages}
+        handleXButtonClick={handleXButtonClick}
+      ></ToastShelf>
       <form onSubmit={handlePopToastButtonClick}>
         <div className={styles.controlsWrapper}>
           <div className={styles.row}>
