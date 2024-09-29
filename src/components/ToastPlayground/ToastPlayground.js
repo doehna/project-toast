@@ -3,30 +3,41 @@ import RadioButton from "../RadioButton";
 import TextArea from "../TextArea";
 import Button from "../Button";
 import ToastShelf from "../ToastShelf";
+import { ToastContext } from "../ToastProvider";
 
 import styles from "./ToastPlayground.module.css";
 
 const VARIANT_OPTIONS = ["notice", "warning", "success", "error"];
 
 function ToastPlayground() {
-  const [radioButtonValue, setRadioButtonValue] = React.useState("notice");
-  const [textAreaValue, setTextAreaValue] = React.useState("");
-  const [toastMessages, setToastMessages] = React.useState([]);
+  const {
+    radioButtonValue,
+    setRadioButtonValue,
+    textAreaValue,
+    setTextAreaValue,
+    toastMessages,
+    setToastMessages,
+    deleteToast,
+    addNewToast,
+    deleteAllToasts,
+  } = React.useContext(ToastContext);
+
+  React.useEffect(() => {
+    const keyDownHandler = (event) => {
+      if (event.code === "Escape") {
+        deleteAllToasts();
+      }
+    };
+    window.addEventListener("keydown", keyDownHandler);
+
+    return () => {
+      window.removeEventListener("keydown", keyDownHandler);
+    };
+  });
 
   const handlePopToastButtonClick = (event) => {
     event.preventDefault();
-    const newToastMessages = [
-      ...toastMessages,
-      { message: textAreaValue, key: Math.random(), variant: radioButtonValue },
-    ];
-    setTextAreaValue("");
-    setRadioButtonValue("notice");
-    setToastMessages(newToastMessages);
-  };
-
-  const handleXButtonClick = (id) => {
-    const newToastMessages = toastMessages.filter((item) => item.key !== id);
-    setToastMessages(newToastMessages);
+    addNewToast();
   };
 
   return (
@@ -38,7 +49,7 @@ function ToastPlayground() {
 
       <ToastShelf
         listOfToasts={toastMessages}
-        handleXButtonClick={handleXButtonClick}
+        handleXButtonClick={deleteToast}
       ></ToastShelf>
       <form onSubmit={handlePopToastButtonClick}>
         <div className={styles.controlsWrapper}>

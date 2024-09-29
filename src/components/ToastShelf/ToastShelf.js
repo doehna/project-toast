@@ -5,13 +5,17 @@ import styles from "./ToastShelf.module.css";
 
 function ToastShelf({ listOfToasts, handleXButtonClick }) {
   return (
-    <ol className={styles.wrapper}>
+    <ol
+      className={styles.wrapper}
+      role="region"
+      aria-live="polite"
+      aria-label="Notification"
+    >
       {listOfToasts.map((toast) => {
         return (
-          <li className={styles.toastWrapper}>
+          <li className={styles.toastWrapper} key={toast.key}>
             <Toast
               id={toast.key}
-              key={toast.key}
               variant={toast.variant}
               handleXButtonClick={handleXButtonClick}
             >
