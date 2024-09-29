@@ -1,7 +1,7 @@
 import React from 'react';
+import useEscapeKey from "../../hooks/useEscapeKey";
 
 export const ToastContext = React.createContext();
-
 
 function ToastProvider({children}) {
   const [radioButtonValue, setRadioButtonValue] = React.useState("notice");
@@ -11,6 +11,8 @@ function ToastProvider({children}) {
   const deleteAllToasts = () => {
     setToastMessages([]);
   }
+
+  useEscapeKey(deleteAllToasts);
 
   const deleteToast = (id) => {
     const newToastMessages = toastMessages.filter((item) => item.key !== id);
@@ -35,8 +37,7 @@ function ToastProvider({children}) {
     toastMessages,
     setToastMessages,
     deleteToast,
-    addNewToast,
-    deleteAllToasts
+    addNewToast
   }
   
   return (<ToastContext.Provider value={contextValues}>{children}</ToastContext.Provider>);

@@ -19,21 +19,7 @@ function ToastPlayground() {
     setToastMessages,
     deleteToast,
     addNewToast,
-    deleteAllToasts,
   } = React.useContext(ToastContext);
-
-  React.useEffect(() => {
-    const keyDownHandler = (event) => {
-      if (event.code === "Escape") {
-        deleteAllToasts();
-      }
-    };
-    window.addEventListener("keydown", keyDownHandler);
-
-    return () => {
-      window.removeEventListener("keydown", keyDownHandler);
-    };
-  });
 
   const handlePopToastButtonClick = (event) => {
     event.preventDefault();
