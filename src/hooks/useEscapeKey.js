@@ -12,7 +12,7 @@ const useEscapeKey = (escapeKeyHandler) => {
     return () => {
       window.removeEventListener("keydown", keyDownHandler);
     };
-  });
+  },[escapeKeyHandler]);
 };
 
 export default useEscapeKey;

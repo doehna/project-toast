@@ -18,12 +18,12 @@ function ToastPlayground() {
     toastMessages,
     setToastMessages,
     deleteToast,
-    addNewToast,
+    addTimedToast
   } = React.useContext(ToastContext);
 
   const handlePopToastButtonClick = (event) => {
     event.preventDefault();
-    addNewToast();
+    addTimedToast();
   };
 
   return (
