@@ -8705,6 +8705,15 @@ var $f59e93c1c2640a4b$export$2e2bcd8739ae039 = $f59e93c1c2640a4b$var$ToastShelf;
 
 
 
+const $b216c464072f3830$export$16e593cddeb30741 = [
+    "notice",
+    "warning",
+    "success",
+    "error"
+];
+const $b216c464072f3830$export$bb1f3a7af481ce64 = undefined;
+
+
 var $8a8a6b0e1ac54159$exports = {};
 
 $parcel$export($8a8a6b0e1ac54159$exports, "controlsWrapper", function () { return $8a8a6b0e1ac54159$export$40c5ce6837c6905d; }, function (v) { return $8a8a6b0e1ac54159$export$40c5ce6837c6905d = v; });
@@ -8736,12 +8745,6 @@ $8a8a6b0e1ac54159$export$b4e5a079ecce723e = `d7rB_G_titleMessageWrapper`;
 $8a8a6b0e1ac54159$export$cc74dcc53cfce4eb = `d7rB_G_wrapper`;
 
 
-const $3f8056ec367259e9$var$VARIANT_OPTIONS = [
-    "notice",
-    "warning",
-    "success",
-    "error"
-];
 function $3f8056ec367259e9$var$ToastPlayground() {
     const { radioButtonValue: radioButtonValue, setRadioButtonValue: setRadioButtonValue, textAreaValue: textAreaValue, setTextAreaValue: setTextAreaValue, toastMessages: toastMessages, setToastMessages: setToastMessages, deleteToast: deleteToast, addTimedToast: addTimedToast } = (0, (/*@__PURE__*/$parcel$interopDefault($kdEmn))).useContext((0, $115ab4799d283e3a$export$29d4e2ed4674ecfc));
     const handlePopToastButtonClick = (event)=>{
@@ -8755,7 +8758,7 @@ function $3f8056ec367259e9$var$ToastPlayground() {
                 children: [
                     /*#__PURE__*/ (0, $8a713af880997588$exports.jsx)("img", {
                         alt: "Cute toast mascot",
-                        src: "/toast.png"
+                        src: `${(0, $b216c464072f3830$export$bb1f3a7af481ce64)}/toast.png`
                     }),
                     /*#__PURE__*/ (0, $8a713af880997588$exports.jsx)("h1", {
                         children: "Toast Playground"
@@ -8790,7 +8793,7 @@ function $3f8056ec367259e9$var$ToastPlayground() {
                                 }),
                                 /*#__PURE__*/ (0, $8a713af880997588$exports.jsx)("div", {
                                     className: `${(0, (/*@__PURE__*/$parcel$interopDefault($8a8a6b0e1ac54159$exports))).inputWrapper} ${(0, (/*@__PURE__*/$parcel$interopDefault($8a8a6b0e1ac54159$exports))).radioWrapper}`,
-                                    children: $3f8056ec367259e9$var$VARIANT_OPTIONS.map((variantOption, index)=>{
+                                    children: (0, $b216c464072f3830$export$16e593cddeb30741).map((variantOption, index)=>{
                                         return /*#__PURE__*/ (0, $8a713af880997588$exports.jsx)((0, $e729a62c3eb87cb3$export$2e2bcd8739ae039), {
                                             id: `variant-${variantOption}`,
                                             name: "variant",
@@ -8885,4 +8888,4 @@ const $b9dff960cd1c7100$var$root = (0, (/*@__PURE__*/$parcel$interopDefault($b8d
 $b9dff960cd1c7100$var$root.render(/*#__PURE__*/ (0, $8a713af880997588$exports.jsx)((0, $ee244b29c83eb4bf$export$2e2bcd8739ae039), {}));
 
 
-//# sourceMappingURL=index.d06fafe3.js.map
+//# sourceMappingURL=index.14e70731.js.map
