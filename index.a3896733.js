@@ -8712,7 +8712,6 @@ const $cdb49e4e8e61372a$export$16e593cddeb30741 = [
     "success",
     "error"
 ];
-const $cdb49e4e8e61372a$export$bb1f3a7af481ce64 = "";
 
 
 var $91382bf75fcba208$exports = {};
@@ -8760,7 +8759,7 @@ function $7f4dff8e909d4291$var$ToastPlayground() {
                 children: [
                     /*#__PURE__*/ (0, $a9d3d534d399c2da$exports.jsx)("img", {
                         alt: "Cute toast mascot",
-                        src: `${(0, $cdb49e4e8e61372a$export$bb1f3a7af481ce64)}/toast.png`
+                        src: `/toast.png`
                     }),
                     /*#__PURE__*/ (0, $a9d3d534d399c2da$exports.jsx)("h1", {
                         children: "Toast Playground"
@@ -8890,4 +8889,4 @@ const $933923e164b0c663$var$root = (0, (/*@__PURE__*/$parcel$interopDefault($42f
 $933923e164b0c663$var$root.render(/*#__PURE__*/ (0, $a9d3d534d399c2da$exports.jsx)((0, $f82fb60c6a7baa78$export$2e2bcd8739ae039), {}));
 
 })();
-//# sourceMappingURL=index.c3ef3c04.js.map
+//# sourceMappingURL=index.a3896733.js.map

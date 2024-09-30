@@ -27555,7 +27555,7 @@ function ToastPlayground() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         alt: "Cute toast mascot",
-                        src: `${(0, _consts.PUBLIC_URL)}/toast.png`
+                        src: `/toast.png`
                     }, void 0, false, {
                         fileName: "src/components/ToastPlayground/ToastPlayground.js",
                         lineNumber: 31,
@@ -30153,14 +30153,12 @@ module.exports["wrapper"] = `_YfUPa_wrapper`;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "VARIANT_OPTIONS", ()=>VARIANT_OPTIONS);
-parcelHelpers.export(exports, "PUBLIC_URL", ()=>PUBLIC_URL);
 const VARIANT_OPTIONS = [
     "notice",
     "warning",
     "success",
     "error"
 ];
-const PUBLIC_URL = "";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"53bch":[function(require,module,exports) {
 module.exports["controlsWrapper"] = `d7rB_G_controlsWrapper`;
