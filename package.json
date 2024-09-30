@@ -19,14 +19,14 @@
   "scripts": {
     "predev": "rimraf .parcel-cache dist",
     "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html",
+    "build": "parcel build public/index.html --public-url '/'",
     "new-component": "new-component",
     "build-ghpages": "parcel build public/index.html --public-url '/project-toast/' --no-optimize",
     "deploy": "gh-pages -d dist"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "staticFiles": {
-    "staticPath": "/project-toast/assets"
+    "staticPath": "assets"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"

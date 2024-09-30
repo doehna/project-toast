@@ -1,11 +1,10 @@
 import React from "react";
 import useEscapeKey from "../../hooks/useEscapeKey";
+import {VARIANT_OPTIONS} from "../../consts"
 
 export const ToastContext = React.createContext();
 
 function ToastProvider({ children }) {
-  const [radioButtonValue, setRadioButtonValue] = React.useState("notice");
-  const [textAreaValue, setTextAreaValue] = React.useState("");
   const [toastMessages, setToastMessages] = React.useState([]);
 
   const deleteAllToasts = React.useCallback(() => {
@@ -20,19 +19,19 @@ function ToastProvider({ children }) {
     );
   });
 
-  const addNewToast = React.useCallback((key = Math.random()) => {
-    setTextAreaValue("");
-    setRadioButtonValue("notice");
+  const addNewToast = React.useCallback((message, setMessage, variant, setVariant, key = Math.random()) => {
+    setMessage("");
+    setVariant(VARIANT_OPTIONS[0]);
     setToastMessages((toastMessages) => [
       ...toastMessages,
-      { message: textAreaValue, key: key, variant: radioButtonValue },
+      { message: message, key: key, variant: variant },
     ]);
   });
 
-  const addTimedToast = React.useCallback(() => {
+  const addTimedToast = React.useCallback((message, setMessage, variant, setVariant, ) => {
     const key = Math.random();
 
-    addNewToast(key);
+    addNewToast(message, setMessage, variant, setVariant, key);
 
     setTimeout(() => {
       deleteToast(key);
@@ -40,12 +39,7 @@ function ToastProvider({ children }) {
   });
 
   const contextValues = {
-    radioButtonValue,
-    setRadioButtonValue,
-    textAreaValue,
-    setTextAreaValue,
     toastMessages,
-    setToastMessages,
     deleteToast,
     addTimedToast,
   };

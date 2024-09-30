@@ -4,32 +4,30 @@ import TextArea from "../TextArea";
 import Button from "../Button";
 import ToastShelf from "../ToastShelf";
 import { ToastContext } from "../ToastProvider";
-
+import {VARIANT_OPTIONS} from '../../consts'
 import styles from "./ToastPlayground.module.css";
-
-const VARIANT_OPTIONS = ["notice", "warning", "success", "error"];
 
 function ToastPlayground() {
   const {
-    radioButtonValue,
-    setRadioButtonValue,
-    textAreaValue,
-    setTextAreaValue,
     toastMessages,
-    setToastMessages,
     deleteToast,
     addTimedToast
   } = React.useContext(ToastContext);
 
+  const [textAreaValue, setTextAreaValue] = React.useState("");
+  const [radioButtonValue, setRadioButtonValue] = React.useState(
+    VARIANT_OPTIONS[0]
+  );
+
   const handlePopToastButtonClick = (event) => {
     event.preventDefault();
-    addTimedToast();
+    addTimedToast(textAreaValue, setTextAreaValue, radioButtonValue, setRadioButtonValue);
   };
 
   return (
     <div className={styles.wrapper}>
       <header>
-        <img alt="Cute toast mascot" src="/toast.png" />
+        <img alt="Cute toast mascot" src={`toast.png`} />
         <h1>Toast Playground</h1>
       </header>
 
