@@ -9,8 +9,6 @@ import styles from "./ToastPlayground.module.css";
 
 function ToastPlayground() {
   const {
-    toastMessages,
-    deleteToast,
     addTimedToast
   } = React.useContext(ToastContext);
 
@@ -31,10 +29,7 @@ function ToastPlayground() {
         <h1>Toast Playground</h1>
       </header>
 
-      <ToastShelf
-        listOfToasts={toastMessages}
-        handleXButtonClick={deleteToast}
-      ></ToastShelf>
+      <ToastShelf/>
       <form onSubmit={handlePopToastButtonClick}>
         <div className={styles.controlsWrapper}>
           <div className={styles.row}>

@@ -1,10 +1,10 @@
 import React from "react";
 
-const useEscapeKey = (escapeKeyHandler) => {
+const useKeyDown = (key, keyHandler) => {
   React.useEffect(() => {
     const keyDownHandler = (event) => {
-      if (event.code === "Escape") {
-        escapeKeyHandler();
+      if (event.code === key) {
+        keyHandler();
       }
     };
     window.addEventListener("keydown", keyDownHandler);
@@ -12,7 +12,7 @@ const useEscapeKey = (escapeKeyHandler) => {
     return () => {
       window.removeEventListener("keydown", keyDownHandler);
     };
-  },[escapeKeyHandler]);
+  },[keyHandler]);
 };
 
-export default useEscapeKey;
+export default useKeyDown;

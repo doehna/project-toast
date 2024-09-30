@@ -1,9 +1,14 @@
 import React from "react";
-
+import { ToastContext } from "../ToastProvider";
 import Toast from "../Toast";
 import styles from "./ToastShelf.module.css";
 
-function ToastShelf({ listOfToasts, handleXButtonClick }) {
+function ToastShelf() {
+  const {
+    toastMessages,
+    deleteToast
+  } = React.useContext(ToastContext);
+
   return (
     <ol
       className={styles.wrapper}
@@ -11,13 +16,13 @@ function ToastShelf({ listOfToasts, handleXButtonClick }) {
       aria-live="polite"
       aria-label="Notification"
     >
-      {listOfToasts.map((toast) => {
+      {toastMessages.map((toast) => {
         return (
           <li className={styles.toastWrapper} key={toast.key}>
             <Toast
               id={toast.key}
               variant={toast.variant}
-              handleXButtonClick={handleXButtonClick}
+              handleXButtonClick={deleteToast}
             >
               {toast.message}
             </Toast>
