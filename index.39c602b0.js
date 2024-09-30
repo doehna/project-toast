@@ -8751,6 +8751,7 @@ function $3f8056ec367259e9$var$ToastPlayground() {
         event.preventDefault();
         addTimedToast();
     };
+    console.log(`${undefined}`);
     return /*#__PURE__*/ (0, $8a713af880997588$exports.jsxs)("div", {
         className: (0, (/*@__PURE__*/$parcel$interopDefault($8a8a6b0e1ac54159$exports))).wrapper,
         children: [
@@ -8888,4 +8889,4 @@ const $b9dff960cd1c7100$var$root = (0, (/*@__PURE__*/$parcel$interopDefault($b8d
 $b9dff960cd1c7100$var$root.render(/*#__PURE__*/ (0, $8a713af880997588$exports.jsx)((0, $ee244b29c83eb4bf$export$2e2bcd8739ae039), {}));
 
 
-//# sourceMappingURL=index.78b7e597.js.map
+//# sourceMappingURL=index.39c602b0.js.map

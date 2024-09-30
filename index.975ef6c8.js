@@ -27547,6 +27547,7 @@ function ToastPlayground() {
         event.preventDefault();
         addTimedToast();
     };
+    console.log(`${undefined}`);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: (0, _toastPlaygroundModuleCssDefault.default).wrapper,
         children: [
@@ -27557,20 +27558,20 @@ function ToastPlayground() {
                         src: `${(0, _consts.PUBLIC_URL)}/toast.png`
                     }, void 0, false, {
                         fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                        lineNumber: 29,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         children: "Toast Playground"
                     }, void 0, false, {
                         fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                        lineNumber: 30,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                lineNumber: 28,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toastShelfDefault.default), {
@@ -27578,7 +27579,7 @@ function ToastPlayground() {
                 handleXButtonClick: deleteToast
             }, void 0, false, {
                 fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                lineNumber: 33,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -27596,12 +27597,12 @@ function ToastPlayground() {
                                 children: "Message"
                             }, void 0, false, {
                                 fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                                lineNumber: 40,
+                                lineNumber: 42,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                            lineNumber: 39,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27612,7 +27613,7 @@ function ToastPlayground() {
                                     children: "Variant"
                                 }, void 0, false, {
                                     fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                                    lineNumber: 51,
+                                    lineNumber: 53,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27629,19 +27630,19 @@ function ToastPlayground() {
                                             children: variantOption
                                         }, index, false, {
                                             fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                                            lineNumber: 55,
+                                            lineNumber: 57,
                                             columnNumber: 19
                                         }, this);
                                     })
                                 }, void 0, false, {
                                     fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                                    lineNumber: 52,
+                                    lineNumber: 54,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                            lineNumber: 50,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27651,7 +27652,7 @@ function ToastPlayground() {
                                     className: (0, _toastPlaygroundModuleCssDefault.default).label
                                 }, void 0, false, {
                                     fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                                    lineNumber: 73,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27661,35 +27662,35 @@ function ToastPlayground() {
                                         children: "Pop Toast!"
                                     }, void 0, false, {
                                         fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                                        lineNumber: 75,
+                                        lineNumber: 77,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                                    lineNumber: 74,
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                            lineNumber: 72,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                    lineNumber: 38,
+                    lineNumber: 40,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/ToastPlayground/ToastPlayground.js",
-                lineNumber: 37,
+                lineNumber: 39,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/ToastPlayground/ToastPlayground.js",
-        lineNumber: 27,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }
