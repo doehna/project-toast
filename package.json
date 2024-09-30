@@ -21,14 +21,15 @@
     "dev": "parcel public/index.html",
     "build": "parcel build public/index.html",
     "new-component": "new-component",
-    "build-ghpages": "parcel build public/index.html --public-url './' --no-optimize",
+    "build-ghpages": "parcel build public/index.html --public-url '/project-toast/' --no-optimize",
     "deploy": "gh-pages -d dist"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "staticFiles": {
-    "staticPath": "assets"
+    "staticPath": "/project-toast/assets"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }
+  },
+  "homepage": "https://doehna.github.io/project-toast/"
 }
